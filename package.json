@@ -1,0 +1,22 @@
+{
+  "name": "location-tracker-whatsapp",
+  "version": "1.0.0",
+  "description": "Track Real Time Location User Whatsapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctoveloz/Location-Tracker-Whatsapp.git"
+  },
+  "author": "Cristiano Matos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctoveloz/Location-Tracker-Whatsapp/issues"
+  },
+  "homepage": "https://github.com/ctoveloz/Location-Tracker-Whatsapp#readme",
+  "dependencies": {
+    "puppeteer": "^2.1.1"
+  }
+}
