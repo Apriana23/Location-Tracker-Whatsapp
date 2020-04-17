@@ -26,29 +26,28 @@ const puppeteer = require('puppeteer');
 
     //Find Group
 	await page.focus('._2S1VP'); // Focus search input form.
+
+
     await page.keyboard.type('Testeee', { delay: 100 });
+    await page.waitFor(6000);
 
-    // Select the best result.
-     const groups = await page.$$('._25Ooe');
-        for (const group of groups)
-    await group.click();
+    let contactElt = (await page.$x(`//*[@class="_25Ooe" and . = "Testeee"]`))[0]; // Select the best result.
+    contactElt.click();
 
-
+    await page.waitFor(5000);
 
     // Select Group Status
     await page.click('._5SiUq');
     await page.waitFor(1000);
 
-    //Select Locations Tab
+    // Select Status Locations
     const handles = await page.$$('._2phEY');
 		for (const handle of handles)
   	await handle.click();
-  	await page.waitFor(1000);
+  	await page.waitFor(6000);
 
-  	//Select Users Tracker
-  	 const users = await page.$$('._2EXPL');
-        for (const user of users)
-    await user.click();
-    await page.waitFor(1000);
+     //Find Group
+
+     await page.click('._2fnzN ._2EXPL');
 
 })();
